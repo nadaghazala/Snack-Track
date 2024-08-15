@@ -1,4 +1,4 @@
-package com.example.snacktrack;
+package com.example.snacktrack.explore.view;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.snacktrack.R;
+import com.example.snacktrack.explore.presenter.ExplorePresenter;
 
 public class ExploreFragment extends Fragment {
     ExplorePresenter explorePresenter = new ExplorePresenter();
@@ -22,5 +25,6 @@ public class ExploreFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
     }
 }
