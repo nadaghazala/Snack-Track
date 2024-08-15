@@ -28,6 +28,7 @@ public class ExploreFragment extends Fragment implements ExploreView {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         explorePresenter= new ExplorePresenter(this);
+        explorePresenter.getCategoriesRepository();
     }
 
     @Override
