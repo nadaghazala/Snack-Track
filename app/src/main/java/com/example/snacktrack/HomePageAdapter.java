@@ -57,8 +57,6 @@ public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.HomePa
 
             imageView= itemView.findViewById(R.id.mealPic);
             mealTitleTxt= itemView.findViewById(R.id.mealTitle);
-            addToFavorites= itemView.findViewById(R.id.favBtn);
-            addToPlanner= itemView.findViewById(R.id.addToPlannerBtn);
 
         }
     }
