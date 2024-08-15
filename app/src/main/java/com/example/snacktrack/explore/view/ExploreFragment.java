@@ -10,10 +10,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.snacktrack.R;
+import com.example.snacktrack.explore.model.CategoriesList;
 import com.example.snacktrack.explore.presenter.ExplorePresenter;
+import com.example.snacktrack.explore.presenter.ExploreView;
 
-public class ExploreFragment extends Fragment {
-    ExplorePresenter explorePresenter = new ExplorePresenter();
+public class ExploreFragment extends Fragment implements ExploreView {
+    ExplorePresenter explorePresenter ;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -25,6 +27,11 @@ public class ExploreFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        explorePresenter= new ExplorePresenter(this);
+    }
+
+    @Override
+    public void showCategoriesList(CategoriesList categoriesList) {
 
     }
 }
