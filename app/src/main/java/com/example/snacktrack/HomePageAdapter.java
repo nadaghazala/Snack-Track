@@ -28,7 +28,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.HomePa
     @Override
     public HomePageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view= LayoutInflater.from(context).inflate(R.layout.listitems, parent, false);
+        View view= LayoutInflater.from(context).inflate(R.layout.categories_items, parent, false);
 
         return new HomePageViewHolder(view);
     }
