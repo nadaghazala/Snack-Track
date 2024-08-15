@@ -7,21 +7,21 @@
     android:padding="4dp">
 
     <TextView
-        android:id="@+id/mealTitle"
+        android:id="@+id/categoryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         tools:text="TextViewTextViewTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mealPic" />
+        app:layout_constraintTop_toBottomOf="@+id/categoryPic" />
 
     <ImageView
-        android:id="@+id/mealPic"
+        android:id="@+id/categoryPic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/mealTitle"
-        app:layout_constraintEnd_toEndOf="@id/mealTitle"
+        app:layout_constraintStart_toStartOf="@id/categoryTitle"
+        app:layout_constraintEnd_toEndOf="@id/categoryTitle"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/ic_launcher_background" />
 
