@@ -53,5 +53,6 @@ dependencies {
     annotationProcessor ("androidx.room:room-compiler:2.6.1")
 
     implementation ("com.squareup.retrofit2:converter-moshi:2.4.0")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
 
 }

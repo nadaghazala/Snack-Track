@@ -7,6 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.snacktrack.R;
 import com.example.snacktrack.explore.model.Category;
 
@@ -22,5 +23,10 @@ public class CategoriesViewHolder extends RecyclerView.ViewHolder {
     }
     public void bind(Category category){
         title.setText(category.strCategory);
+        Glide
+                .with(picture.getContext())
+                .load(category.strCategoryThumb)
+                .centerCrop()
+                .into(picture);
     }
 }
