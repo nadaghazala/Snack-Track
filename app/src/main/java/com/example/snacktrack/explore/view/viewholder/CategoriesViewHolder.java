@@ -13,6 +13,7 @@ import com.example.snacktrack.explore.model.Category;
 
 public class CategoriesViewHolder extends RecyclerView.ViewHolder {
     TextView title;
+    int i;
     ImageView picture;
 
     public CategoriesViewHolder(@NonNull View itemView) {
