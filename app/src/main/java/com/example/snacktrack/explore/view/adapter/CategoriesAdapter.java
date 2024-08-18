@@ -16,8 +16,14 @@ import java.util.ArrayList;
 public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesViewHolder> {
 
     private ArrayList<Category> categories;
-    public CategoriesAdapter(ArrayList<Category> categories) {
-        this.categories= categories;
+    private OnItemClickListener listener;
+    public interface OnItemClickListener {
+        void onItemClick(String category);
+    }
+
+    public CategoriesAdapter(ArrayList<Category> categories, OnItemClickListener listener) {
+        this.categories = categories;
+        this.listener = listener;
     }
 
     @NonNull
@@ -29,7 +35,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull CategoriesViewHolder holder, int position) {
-    holder.bind(categories.get(position));
+        holder.bind(categories.get(position), listener);
     }
 
     @Override
