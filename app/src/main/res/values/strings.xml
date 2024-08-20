@@ -3,4 +3,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="addtoplanner">Add to Planner</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="log_in">Log in</string>
+    <string name="loginBtn">LOGIN</string>
+    <string name="sign_up">Sign up</string>
+    <string name="sign_upBtn">SIGN UP</string>
+    <string name="register">REGISTER</string>
+    <string name="registerTxtView">Register</string>
 </resources>
