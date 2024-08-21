@@ -23,11 +23,12 @@
         />
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailEditText"
-            android:text="@string/email"
+            android:id="@+id/emailEditTextLogin"
+            android:hint="@string/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"/>
@@ -38,12 +39,18 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordEditText"
-            android:text="@string/password"
+            android:id="@+id/passwordEditTextLogin"
+            android:hint="@string/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"/>
     </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarLogin"
+        android:visibility="gone"/>
 
     <Button
         android:id="@+id/loginBtn"
@@ -51,8 +58,17 @@
         android:layout_height="wrap_content"
         android:text="@string/loginBtn"
         android:gravity="center"
+        android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:layout_margin="16dp"/>
+    <TextView
+        android:id="@+id/dontHaveAnAccountTxtView"
+        android:text="@string/don_t_have_an_account_register"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 
 
