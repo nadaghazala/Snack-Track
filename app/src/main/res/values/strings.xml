@@ -13,4 +13,7 @@
     <string name="sign_upBtn">SIGN UP</string>
     <string name="register">REGISTER</string>
     <string name="registerTxtView">Register</string>
+    <string name="already_have_an_account_login">Already have an account? Login.</string>
+    <string name="don_t_have_an_account_register">Don\'t have an account? Register.</string>
+    <string name="logout">LOGOUT</string>
 </resources>
