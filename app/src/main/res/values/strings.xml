@@ -16,4 +16,5 @@
     <string name="already_have_an_account_login">Already have an account? Login.</string>
     <string name="don_t_have_an_account_register">Don\'t have an account? Register.</string>
     <string name="logout">LOGOUT</string>
+    <string name="welcome_to">Welcome to</string>
 </resources>

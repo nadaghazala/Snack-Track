@@ -58,5 +58,7 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-moshi:2.4.0")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
 
+    implementation ("com.airbnb.android:lottie:3.7.0")
+
 
 }
