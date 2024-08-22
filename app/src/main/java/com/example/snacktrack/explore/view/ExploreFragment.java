@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.snacktrack.R;
@@ -37,7 +38,10 @@ public class ExploreFragment extends Fragment implements ExploreView {
 
     @Override
     public void showCategoriesList(CategoriesList categoriesList) {
-        CategoriesAdapter categoriesAdapter= new CategoriesAdapter(categoriesList.categories);
+        CategoriesAdapter categoriesAdapter= new CategoriesAdapter(categoriesList.categories, category->{
+       // ExploreFragmentDirections.exploreToCategoryListExpanded(category);
+            NavHostFragment.findNavController(this).navigate(ExploreFragmentDirections.exploreToCategoryListExpanded(category));
+        });
         recyclerView.setAdapter(categoriesAdapter);
     }
 }
