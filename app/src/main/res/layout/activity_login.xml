@@ -6,18 +6,18 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-
+    android:background="@drawable/b3"
     android:layout_height="match_parent"
     tools:context=".Login">
 
     <TextView
         android:id="@+id/loginTextView"
         android:text="@string/log_in"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="26dp"
+        android:textSize="32dp"
         android:gravity="center"
 
         />
@@ -41,26 +41,30 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordEditTextLogin"
             android:hint="@string/password"
+            android:inputType="numberPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"/>
+            android:layout_margin="16dp"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/progressBarLogin"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/loginBtn"
-        android:gravity="center"
         android:layout_gravity="center"
+        android:layout_margin="16dp"
         android:layout_marginTop="16dp"
-        android:layout_margin="16dp"/>
+        android:backgroundTint="#52AC84"
+        android:gravity="center"
+        android:text="@string/loginBtn" />
     <TextView
         android:id="@+id/dontHaveAnAccountTxtView"
         android:text="@string/don_t_have_an_account_register"

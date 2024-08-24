@@ -44,14 +44,14 @@
             android:id="@+id/categoryListExpandedToMealDetailsFragment"
             app:destination="@id/mealDetailsFragment">
             <argument
-                android:name="id"
+                android:name="mealId"
                 app:argType="string"/>
         </action>
     </fragment>
 
     <fragment
         android:id="@+id/mealDetailsFragment"
-        android:name="com.example.snacktrack.mealdetails.MealDetailsFragment"
+        android:name="com.example.snacktrack.mealdetails.view.MealDetailsFragment"
         android:label="mealdetails"/>
 
 

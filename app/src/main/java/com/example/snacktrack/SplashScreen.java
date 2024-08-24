@@ -24,7 +24,7 @@ public class SplashScreen extends AppCompatActivity {
 
         textView= findViewById(R.id.welcomeTxt);
         lottieAnimationView= findViewById(R.id.lottie);
-        textView.animate().setDuration(9000);
+        textView.animate().setDuration(10000);
         lottieAnimationView.animate().setDuration(9000);
         new Handler().postDelayed(new Runnable() {
             @Override

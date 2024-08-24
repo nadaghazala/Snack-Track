@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "631053539084",
+    "project_id": "foodplannerdb",
+    "storage_bucket": "foodplannerdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631053539084:android:655947793ccb8e883adb29",
+        "android_client_info": {
+          "package_name": "com.example.snacktrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "631053539084-68qd6el6kgan43g70kcpromovteq8c01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnTOu1AEkV4znMUQcCZBbsrKvTQuEwsz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "631053539084-68qd6el6kgan43g70kcpromovteq8c01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

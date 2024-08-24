@@ -93,6 +93,8 @@ public class Login extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
+                                    // task.getResult().getUser().
+                                    // sharedpreference caching^
                                     Toast.makeText(getApplicationContext(), "Login Succesful", Toast.LENGTH_SHORT).show();
                                     Intent intent= new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
