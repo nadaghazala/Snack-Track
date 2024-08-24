@@ -44,11 +44,12 @@ TextView textView;
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         String category = getArguments().getString("category");
-        // String meal = getArguments().getString("meal");
+
 
         textView= view.findViewById(R.id.categoryTitle);
         recyclerView= view.findViewById(R.id.recyclerViewCateogryExpanded);
         categoryListExpandedPresenter = new CategoryListExpandedPresenter(this);
+        textView.setText(category);
         categoryListExpandedPresenter.getCategoryListExpandedRepository(category);
     }
 
