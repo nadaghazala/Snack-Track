@@ -1,20 +1,25 @@
-package com.example.snacktrack;
+package com.example.snacktrack.database;
 
 
 import android.content.Context;
+import android.util.Log;
+
+import com.example.snacktrack.FavoriteMeal;
+import com.example.snacktrack.MealPlanner;
+import com.example.snacktrack.MealPlannerFragment;
 
 import java.util.List;
 
 import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.core.Flowable;
 
-public class DatabaseHandler implements LocalDataSource{
+public class DatabaseHandler implements LocalDataSource {
 
     Context context;
     private static DatabaseHandler databaseHandler;
     private MealDao mealDao;
 
-    private DatabaseHandler(android.content.Context context) {
+    public DatabaseHandler(android.content.Context context) {
         this.context = context;
         mealDao = MealDatabase.getInstance(context).mealDao();
     }
@@ -26,10 +31,10 @@ public class DatabaseHandler implements LocalDataSource{
         return databaseHandler;
     }
 
-
     @Override
-    public Completable insertFavoriteMeal(FavoriteMeal meal) {
-        return mealDao.insertMeal(meal);
+    public Completable addMealtoFavorites(FavoriteMeal meal) {
+        Log.d("nada", "addMealtoFavorites: here " + meal.mealName);
+        return mealDao.addMealToFavorites(meal);
     }
 
     @Override
