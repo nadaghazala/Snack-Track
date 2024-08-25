@@ -1,11 +1,14 @@
 package com.example.snacktrack;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 
-@Entity
+@Entity(primaryKeys = {"userID","mealID"})
 public class FavoriteMeal {
-    String userID;
-    String mealID;
-    String mealName;
-    String mealThumbnail;
+    @NonNull
+   public String userID;
+    @NonNull
+    public String mealID;
+    public String mealName;
+    public String mealThumbnail;
 }
