@@ -1,25 +1,30 @@
 package com.example.snacktrack.mealdetails.repository;
 
+import com.example.snacktrack.FavoriteMeal;
+import com.example.snacktrack.MealPlanner;
 import com.example.snacktrack.MyRetrofitBuilder;
-import com.example.snacktrack.categorylistexpanded.model.Meal;
 import com.example.snacktrack.categorylistexpanded.model.MealsList;
-import com.example.snacktrack.explore.model.CategoriesList;
-import com.example.snacktrack.explore.presenter.ExploreCallback;
-import com.example.snacktrack.explore.repository.CategoriesService;
+import com.example.snacktrack.database.LocalDataSource;
 
 import com.example.snacktrack.mealdetails.presenter.MealDetailsCallback;
 
+import java.util.List;
+
+import io.reactivex.rxjava3.core.Completable;
+import io.reactivex.rxjava3.core.Flowable;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MealDetailsRepository {
+public class MealDetailsRepository implements  LocalDataSource{
     MyRetrofitBuilder myRetrofitBuilder;
     MealDetailsService mealDetailsService;
+    LocalDataSource localDataSource;
 
-    public MealDetailsRepository() {
+    public MealDetailsRepository(LocalDataSource localDataSource) {
         this.myRetrofitBuilder = new MyRetrofitBuilder();
         this.mealDetailsService= myRetrofitBuilder.getRetrofit().create(MealDetailsService.class);
+        this.localDataSource = localDataSource;
     }
 
     public void getMealDetails(String id, MealDetailsCallback callback) {
@@ -40,5 +45,42 @@ public class MealDetailsRepository {
             }
         });
 
+    }
+
+
+
+    @Override
+    public Completable addMealtoFavorites(FavoriteMeal meal) {
+        return localDataSource.addMealtoFavorites(meal);
+    }
+
+    @Override
+    public Flowable<List<FavoriteMeal>> getAllFavouriteMeals(String userId) {
+        return localDataSource.getAllFavouriteMeals(userId);
+    }
+
+    @Override
+    public Completable deleteFavoriteMeal(FavoriteMeal meal) {
+        return localDataSource.deleteFavoriteMeal(meal);
+    }
+
+    @Override
+    public Flowable<Integer> doesFavoriteMealExist(String userId, String mealId) {
+        return localDataSource.doesFavoriteMealExist(userId, mealId);
+    }
+
+    @Override
+    public Completable insertPlannerMeal(MealPlanner meal) {
+        return localDataSource.insertPlannerMeal(meal);
+    }
+
+    @Override
+    public Flowable<List<MealPlanner>> getAllCalenderMeals(String userId) {
+        return localDataSource.getAllCalenderMeals(userId);
+    }
+
+    @Override
+    public Completable deletePlannerMeal(MealPlanner meal) {
+        return localDataSource.deletePlannerMeal(meal);
     }
 }
