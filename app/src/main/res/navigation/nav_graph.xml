@@ -37,11 +37,11 @@
         android:label="explore"
         tools:layout="@layout/fragment_meal_planner" />
 
-    <fragment
-        android:id="@+id/profile"
-        android:name="com.example.snacktrack.Account"
-        android:label="explore"
-        tools:layout="@layout/fragment_account" />
+<!--    <fragment-->
+<!--        android:id="@+id/profile"-->
+<!--        android:name="com.example.snacktrack.AccountActivity"-->
+<!--        android:label="explore"-->
+<!--        tools:layout="@layout/activity_account" />-->
     <fragment
         android:id="@+id/categoryListExpandedFragment"
         android:name="com.example.snacktrack.categorylistexpanded.view.CategoryListExpandedFragment"
@@ -59,6 +59,11 @@
         android:id="@+id/mealDetailsFragment"
         android:name="com.example.snacktrack.mealdetails.view.MealDetailsFragment"
         android:label="mealdetails"/>
+    <activity
+        android:id="@+id/profile"
+        android:name="com.example.snacktrack.AccountActivity"
+        android:label="activity_account"
+        tools:layout="@layout/activity_account" />
 
 
 </navigation>
