@@ -5,10 +5,15 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/home">
 
+<!--    <activity-->
+<!--        android:id="@+id/homePageActivity"-->
+<!--        android:name="com.example.snacktrack.HomePageActivity"-->
+<!--        android:label="activity_home"-->
+<!--        tools:layout="@layout/activity_home" />-->
     <fragment
         android:id="@+id/home"
-        android:name="com.example.snacktrack.explore.view.ExploreFragment"
-        android:label="home"/>
+        android:name="com.example.snacktrack.fragmenthomep"
+        android:label="home" />
 
     <fragment
         android:id="@+id/explore"
@@ -64,6 +69,7 @@
         android:name="com.example.snacktrack.AccountActivity"
         android:label="activity_account"
         tools:layout="@layout/activity_account" />
+
 
 
 </navigation>
