@@ -18,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/mealPic"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="TextViewTextViewTextView" />
+        tools:text="TextViewTextViewTextView." />
 
     <TextView
         android:id="@+id/mealDescription"
