@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/home">
 
+<!--    <activity-->
+<!--        android:id="@+id/homePageActivity"-->
+<!--        android:name="com.example.snacktrack.HomePageActivity"-->
+<!--        android:label="activity_home"-->
+<!--        tools:layout="@layout/activity_home" />-->
     <fragment
         android:id="@+id/home"
-        android:name="com.example.snacktrack.explore.view.ExploreFragment"
-        android:label="home"/>
+        android:name="com.example.snacktrack.fragmenthomep"
+        android:label="home" />
 
     <fragment
         android:id="@+id/explore"
@@ -22,20 +28,25 @@
             </action>
     </fragment>
 
-    <fragment
-        android:id="@+id/search"
-        android:name="com.example.snacktrack.explore.view.ExploreFragment"
-        android:label="explore"/>
+
 
     <fragment
         android:id="@+id/favBtn"
-        android:name="com.example.snacktrack.explore.view.ExploreFragment"
-        android:label="explore"/>
+        android:name="com.example.snacktrack.favoritemeal.view.FavoriteFragment"
+        android:label="explore"
+        tools:layout="@layout/fragment_favorite" />
 
     <fragment
         android:id="@+id/planner"
-        android:name="com.example.snacktrack.explore.view.ExploreFragment"
-        android:label="explore"/>
+        android:name="com.example.snacktrack.MealPlannerFragment"
+        android:label="explore"
+        tools:layout="@layout/fragment_meal_planner" />
+
+<!--    <fragment-->
+<!--        android:id="@+id/profile"-->
+<!--        android:name="com.example.snacktrack.AccountActivity"-->
+<!--        android:label="explore"-->
+<!--        tools:layout="@layout/activity_account" />-->
     <fragment
         android:id="@+id/categoryListExpandedFragment"
         android:name="com.example.snacktrack.categorylistexpanded.view.CategoryListExpandedFragment"
@@ -53,6 +64,12 @@
         android:id="@+id/mealDetailsFragment"
         android:name="com.example.snacktrack.mealdetails.view.MealDetailsFragment"
         android:label="mealdetails"/>
+    <activity
+        android:id="@+id/profile"
+        android:name="com.example.snacktrack.AccountActivity"
+        android:label="activity_account"
+        tools:layout="@layout/activity_account" />
+
 
 
 </navigation>

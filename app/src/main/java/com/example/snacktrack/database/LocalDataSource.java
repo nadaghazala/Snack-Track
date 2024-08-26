@@ -1,4 +1,8 @@
-package com.example.snacktrack;
+package com.example.snacktrack.database;
+
+import com.example.snacktrack.FavoriteMeal;
+import com.example.snacktrack.MealPlanner;
+import com.example.snacktrack.MealPlannerFragment;
 
 import java.util.List;
 
@@ -7,7 +11,7 @@ import io.reactivex.rxjava3.core.Flowable;
 
 public interface LocalDataSource {
 
-    Completable insertFavoriteMeal(FavoriteMeal meal);
+    Completable addMealtoFavorites(FavoriteMeal meal);
     Flowable<List<FavoriteMeal>> getAllFavouriteMeals(String userId);
     Completable deleteFavoriteMeal(FavoriteMeal meal);
     Flowable<Integer> doesFavoriteMealExist(String userId, String mealId);
@@ -15,5 +19,6 @@ public interface LocalDataSource {
     Completable insertPlannerMeal(MealPlanner meal);
     Flowable<List<MealPlanner>> getAllCalenderMeals(String userId );
     Completable deletePlannerMeal(MealPlanner meal);
+
 
 }
